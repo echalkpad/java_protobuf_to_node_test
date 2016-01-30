@@ -1,0 +1,12 @@
+package instrument;
+
+option java_outer_classname = "InstrumentProtos";
+
+message Instrument {
+  required string symbol = 1;
+  required string company = 2;
+  required float avgVolume = 3;
+  required float lastClose = 4;
+}
+
+
