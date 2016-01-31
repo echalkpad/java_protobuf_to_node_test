@@ -27,7 +27,7 @@ var App = React.createClass({
           <p>Clicking the button below will send a GET to Node. <br/>
              Node will forward the GET to a Java web server, which <br/>
              will respond with a protobuf byte array containing <br/>
-             stock information (one of four companies). The Node <br/>
+             stock information (one of four possibilities). The Node <br/>
              server will translate this to JSON, and return it <br/>
              to the browser.</p>
           <a  href="#" className="btn btn-primary btn-lg" onClick={this.retrieve}>
