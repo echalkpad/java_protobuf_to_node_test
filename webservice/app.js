@@ -5,6 +5,8 @@ var protoBuf = require("protobufjs");
 var builder = protoBuf.loadProtoFile('../src/main/resources/instrument.proto');
 
 var app = express();
+app.use(express.static(__dirname + '/dist'));
+
 
 var port = process.env.PORT || 3000;
 
@@ -23,6 +25,10 @@ app.get('/protobuf', function(req, res) {
       });
     }
   });
+});
+
+app.get('/', function(req, res) {
+  res.sendFile(__dirname + '/dist/index.html');
 });
 
 app.listen(port, function() {
